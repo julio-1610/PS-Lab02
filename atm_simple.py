@@ -8,6 +8,8 @@ class Cajero:
     def __init__(self):
         self.continuar = True
         self.monto = 5000
+        
+        self.monto_MAX_DIA = 5000
 
     def contraseña(self):
         contador = 1
@@ -76,7 +78,8 @@ class Cajero:
     def depositarTEST(self, cantidad):
         if(cantidad <= 0):
             return -1
-        
+        if(cantidad > self.monto_MAX_DIA):
+            return -1
         self.monto += cantidad
         return self.monto
     
