@@ -29,17 +29,12 @@ class Cajero:
         self.contraseña()
         opcion = 0
         while opcion != "4":
-            os.system("cls")
+            #os.system("cls")
             print(""" Bienvenido al cajero automatico
-
             ******Menú******
-
             1-  Depositar
-
             2- Retirar
-
             3- Ver saldo
-
             4- Salir """)
             opcion = input("Su opción es: ")
             if self.continuar:
