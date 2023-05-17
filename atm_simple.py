@@ -8,7 +8,6 @@ class Cajero:
     def __init__(self):
         self.continuar = True
         self.monto = 5000
-        self.menu()
 
     def contraseña(self):
         contador = 1
@@ -73,5 +72,22 @@ class Cajero:
 
     def ver(self):
         print("Su saldo es: " , self.monto)
-
-app = Cajero()
+        
+    def depositarTEST(self, cantidad):
+        if(cantidad <= 0):
+            return -1
+        
+        self.monto += cantidad
+        return self.monto
+    
+    def retirarTEST(self, cantidad):
+        if(self.monto < cantidad):
+            return -1
+        if(cantidad <= 0):
+            return -1
+        
+        self.monto -= cantidad
+        return self.monto
+    
+    def verTEST(self):
+        return self.monto
